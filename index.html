@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class= "coupon-card">
+            <img src="Zomato_logo.png" class="logo">
+            <h3>25% flat off on all orders within the city </h3>
+            <div class="coupon-offer">
+                <span id="couponcode">STEALDEAL25</span>
+                <span id="couponbtn">COPY CODE</span>
+            </div>
+            <p>Valid Till: 31 May, 2023</p>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        
+        </div>
+    </div>
+<script>
+    var couponbtn = document.getElementById("couponbtn");
+    var couponCode = document.getElementById("couponcode");
+
+    couponbtn.onclick = function(){
+        navigator.clipboard.writeText(couponcode.innerHTML);
+        couponbtn.innerHTML = "COPIED";
+        setTimeout(function(){
+            couponbtn.innerHTML = "COPY CODE";
+        },3000);
+    }
+</script>
+    
+</body>
+</html>
